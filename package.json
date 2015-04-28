@@ -1,0 +1,10 @@
+{
+  "name": "gitbook-plugin-cdc-tema",
+  "version": "0.0.1",
+  "description": "Tema da Casa do Codigo",
+  "main": "index.js",
+  "private": true,
+  "engines": {
+    "gitbook": ">=1.5.0"
+  }
+}
