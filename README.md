@@ -40,3 +40,5 @@ Na inicialização do Gitbook são configuradas algumas propriedades da geraçã
 * `pdf.footerTemplate`: template html do rodápé do livro
 * `pdf.summary.headerTemplate`: template html do cabeçalho do sumário
 * `pdf.summary.footerTemplate`: template html do rodapé do sumário
+
+A maioria das opções são do Gitbook, normalmente definidas no `book.json`. As opções `pdf.summary.headerTemplate` e `pdf.summary.footerTemplate` são opções específicas do `gitbook-plugin-cdc`.
