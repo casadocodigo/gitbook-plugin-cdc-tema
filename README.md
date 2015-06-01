@@ -26,3 +26,17 @@ Os templates utilizados são compatíveis com a _template engine_ [swig](http://
 
 ### Templates para ebook
 * [`ebook/templates/gitbook/summary.html`](https://github.com/casadocodigo/gitbook-plugin-cdc-tema/blob/master/theme/ebook/templates/gitbook/summary.html): template para o sumário de ebooks gerados nos formatos mobi e epub.
+
+## Propriedades
+
+Na inicialização do Gitbook são configuradas algumas propriedades da geração do `pdf`:
+* `pdf.customSize`: tamanho do livro, largura x altura, em mílimetros
+* `pdf.fontSize`: tamanho da fonte em pts
+* `pdf.margin.top`: margem superior em pts
+* `pdf.margin.bottom`: margem inferior em pts
+* `pdf.margin.left`: margem esquerda em pts
+* `pdf.margin.right`: margem direita em pts
+* `pdf.headerTemplate`: template html do cabeçalho do livro
+* `pdf.footerTemplate`: template html do rodápé do livro
+* `pdf.summary.headerTemplate`: template html do cabeçalho do sumário
+* `pdf.summary.footerTemplate`: template html do rodapé do sumário
