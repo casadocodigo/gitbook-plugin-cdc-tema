@@ -36,5 +36,5 @@
 }
 
 :not(span) {
-    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif
+    font-family: Merriweather,Georgia,serif;
 }
