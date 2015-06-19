@@ -1,18 +1,20 @@
 body .page {
-	line-height: 1.8em;
+	line-height: 2em;
 	font-weight: 300;
-	text-align: justify;
+	text-align: left;
 }
 
 body .page h1 {
 	font-weight: normal;
 	line-height: 1.1em;
+    text-transform: uppercase;
 }
 
 body .page h2 {
 	font-size: 16pt;
-	font-weight: bold;
-	font-variant: small-caps;
+	font-weight: normal;
+	font-variant: normal;
+    text-transform: uppercase;
 	line-height: 1.1em;
 	padding: 2px 0 0 0;
 	margin: 1em 0 0.5em 0;
@@ -69,9 +71,9 @@ body .page .chapterHeader {
 	font-size: 12pt;
 	font-weight: normal;
 	text-align: left;
-	margin-top: 345px!important;
 	page-break-before: always;
 }
+
 body .page .chapterHeader:first-of-type {
 	page-break-before: avoid;
 }
@@ -83,5 +85,5 @@ body .page .chapterHeader:first-of-type {
 .page .book-chapter-1 {
 	font-size: 26pt;
 	font-weight: normal;
-	margin: 0 0 1em 0;
+	margin: 0 0 3cm 0;
 }
