@@ -7,14 +7,17 @@ body .page {
 
 body .page h1 {
 	padding: 0px;
+    font-family: Arial, sans-serif;
 }
 
 body .page h2 {
 	border-bottom: none;
+    font-family: Arial, sans-serif;
 }
 
 body .page h3 {
 	padding: 0px;
+    font-family: Arial, sans-serif;
 }
 
 body .page ul {
@@ -48,6 +51,8 @@ body .page img {
 body .page .figcaption {
 	text-align: center;
 	font-size: 0.9em;
+	margin-top: 2em;
+    color: #59595b;
 }
 
 body .page .figure {
