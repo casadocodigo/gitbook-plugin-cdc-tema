@@ -21,24 +21,24 @@ body .page h2 {
 }
 
 body .page h3 {
-	font-size: 11pt;
+	font-size: 13pt;
 	font-weight: bold;
 	line-height: 1.1em;
 	margin: 20px 0 15px 0;
 }
 
 body .page p {
-	margin: 0;
+	margin: 0.8em 0;
 	border: 0;
-	font-size: 11pt;
+	font-size: 12pt;
 }
 
 body .page ul {
-	font-size: 11pt;
+	font-size: 12pt;
 }
 
 body .page li {
-	font-size: 11pt;
+	font-size: 12pt;
 }
 
 body .page pre {
@@ -46,7 +46,7 @@ body .page pre {
 }
 
 body .page code {
-	font-size: 12px;
+	font-size: 11px;
 }
 
 body .page figure {
