@@ -47,6 +47,7 @@ body .page pre {
 
 body .page code {
 	font-size: 11px;
+	font-family: 'Liberation Mono';
 }
 
 body .page .figure {
