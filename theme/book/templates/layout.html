@@ -3,6 +3,7 @@
     {{ htmlSnippet("html:start")|default("") }}
     <head>
         {{ htmlSnippet("head:start")|default("") }}
+        <meta charset="UTF-8">
         <title>{% block title %}{% endblock %}</title>
         {% block head %}{% endblock %}
         {{ htmlSnippet("head:end")|default("") }}
