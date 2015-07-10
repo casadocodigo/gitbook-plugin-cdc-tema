@@ -14,12 +14,20 @@
            <img id="cover-image" src="cover.jpg" alt="Capa" width="280" height="395"/>
             <h1 id="book-title">{{ title }}</h1>
         </header>
+        {% for introSection in options.intro %}
+            {% autoescape false %}{{ introSection.content }}{% endautoescape %}
+        {% endfor %}
         <div class="toc">
             <h1>Sumário</h1>
             <ul>
-                 {% for chapter in summary.chapters %}
-                     <li><span>{{ Number(chapter.level) + 1 }} - {{ chapter.title }}</span></li>
-                 {% endfor %}
+                {% for chapter in summary.chapters %}
+                    <li><span>{{ Number(chapter.level) + 1 }} - {{ chapter.title }}</span></li>
+                    <ul>
+                        {% for section in chapter.sections %}
+                            <li><span>{{ section.title }}</span></li>
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
             </ul>
         </div>
     </div>

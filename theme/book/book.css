@@ -34,7 +34,6 @@ header {
 .toc h1 {
     line-height: 5em;
     margin: 0;
-    font-weight: bold;
 }
 
 .toc ul {
@@ -44,4 +43,9 @@ header {
 
 .toc li {
     list-style: none;
+}
+
+.intro h1 {
+    line-height: 1em;
+    margin: 0;
 }
