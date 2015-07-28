@@ -28,12 +28,14 @@ body .page li > ul {
 body .page pre {
 	background-color: white;
 	overflow: hidden;
+	word-wrap: break-word;
 	margin: 1em 0 1em 0;
 	padding: 0;
 }
 
 body .page pre code, body .page code {
 	background-color: white;
+	word-wrap: break-word;
 }
 
 body .page a {
