@@ -45,6 +45,7 @@ body .page a {
 body .page img {
 	display: block;
 	margin: 0px auto;
+	width: 100%;
 }
 
 body .page .figcaption {

@@ -49,3 +49,7 @@ header {
     line-height: 1em;
     margin: 0;
 }
+
+img {
+	width: 100%;
+}
