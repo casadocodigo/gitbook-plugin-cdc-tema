@@ -15,21 +15,11 @@
 
 {% macro articles(_articles) %}
     {% for item in _articles %}
-        {% set externalLink = item.path|isExternalLink %}
         <li>
-            {% if item.path %}
-                {% if !externalLink %}
-                    <a href="{{ basePath }}/{{ item.path|mdLink }}">{{ item.title }}</a>
-                {% else %}
-                    <a target="_blank" href="{{ item.path }}">{{ item.title }}</a>
-                {% endif %}
+            {% if (options.numIntroChapters > 0) and (item.path == 'README.md' or item.path.indexOf('intro') == 0)%}
+                <a href="{{ basePath }}/{{ item.path|mdLink }}">{{ item.title }}</a>
             {% else %}
-            {{ item.title }}
-            {% endif %}
-            {% if item.articles.length > 0 %}
-            <ol>
-                {{ articles(item.articles) }}
-            </ol>
+                <a href="{{ basePath }}/{{ item.path|mdLink }}">{{ Number(item.level) - options.numIntroChapters + 1 }}. {{ item.title }}</a>
             {% endif %}
         </li>
     {% endfor %}
@@ -38,13 +28,9 @@
 {% block content %}
 <div class="page page-toc">
     <h1>Sumário</h1>
-    <ol>
+    <ul>
     {{ articles(summary.chapters) }}
-
-    {% if glossary.length > 0 %}
-    <li><a href="{{ basePath }}/GLOSSARY.html">Glossary</a></li>
-    {% endif %}
-    </ol>
+    </ul>
 </div>
 {% endblock %}
 
