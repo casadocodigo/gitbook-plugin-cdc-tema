@@ -62,11 +62,15 @@ body .page .figure .figcaption {
 	font-size: 1em;
 }
 
-p ~ p {
+body .page p {
 	text-indent: 1.5em;
 }
 
-li > p ~ p {
+body .page blockquote > p {
+	text-indent: 0;
+}
+
+body .page li > p {
 	text-indent: 0;
 }
 
