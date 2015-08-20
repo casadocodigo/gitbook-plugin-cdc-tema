@@ -3,7 +3,7 @@ var theme = require("./theme");
 module.exports = {
     hooks: {
         init: function(){
-			this.options.maxLineLength = 80;
+	    this.options.maxLineLength = 67;
             theme.pdfOptions.call(this);
         }
     }
