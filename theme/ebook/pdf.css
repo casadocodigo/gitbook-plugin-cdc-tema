@@ -95,3 +95,8 @@ body .page .chapterHeader:first-of-type {
 	font-weight: normal;
 	margin: 0 0 3cm 0;
 }
+
+/* nao remover. isso garante que o sumario do gitbook tem apenas 1 pagina. */
+body .page-toc {
+    display: none;
+}
