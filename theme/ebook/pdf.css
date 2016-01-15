@@ -86,6 +86,10 @@ body .page .chapterHeader:first-of-type {
 	page-break-before: avoid;
 }
 
+body .intro h1 {
+	border-bottom: none;
+}
+
 .page .book-chapter {
 	text-align: left;
 }
@@ -99,4 +103,45 @@ body .page .chapterHeader:first-of-type {
 /* nao remover. isso garante que o sumario do gitbook tem apenas 1 pagina. */
 body .page-toc {
     display: none;
+}
+
+.toc ul, li {
+    font-family: 'MinionPro', 'Minion Pro';
+}
+.toc ul {
+   list-style-type: none;
+}
+.toc h1 {
+    margin-top: 110px!important;
+    margin-bottom: 70px!important;
+    font-size: 3em;
+    font-family: 'MinionPro', 'Minion Pro';
+}
+.toc .chapter-toc {
+   padding-left: 0;
+}
+.toc .chapter-toc li {
+   margin-bottom: 17px;
+   font-size: 12pt;
+}
+.toc .chapter-name-toc {
+   font-weight: bold;
+   color: #0000B3;
+}
+.toc .chapter-page-toc {
+   font-weight: bold;
+   float: right;
+}
+.toc .section-toc {
+   margin-top: 7px;
+}
+.toc .section-toc li {
+   margin-bottom: 7px;
+   font-size: 11pt;
+}
+.toc .section-name-toc {
+   color: #0000B3;
+}
+.toc .section-page-toc {
+   float: right;
 }
