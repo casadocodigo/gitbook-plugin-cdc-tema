@@ -93,3 +93,16 @@ body .page-toc h1 {
 body .page-toc {
 	margin: 15px;
 }
+
+body .page .part-header h1 {
+	border-bottom: none;
+	text-transform: none;
+	text-align: center;
+	font-weight: bold;
+	font-size: 3em;
+	margin: 6.2cm 0 0 0;
+}
+
+body .page .part-header h1:first-of-type {
+	margin: 1cm 0 0 0;
+}
