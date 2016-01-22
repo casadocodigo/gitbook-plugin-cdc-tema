@@ -47,3 +47,7 @@ body .page .chapterHeader {
 .page .book-chapter-1 {
 	margin: 0 0 .9em 0;
 }
+
+body .page .part-header h1 {
+	margin: 0 0.3em 0;
+}

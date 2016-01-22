@@ -7,14 +7,14 @@ body .page {
 body .page h1 {
 	font-weight: normal;
 	line-height: 1.1em;
-    text-transform: uppercase;
+	text-transform: uppercase;
 }
 
 body .page h2 {
 	font-size: 16pt;
 	font-weight: normal;
 	font-variant: normal;
-    text-transform: uppercase;
+	text-transform: uppercase;
 	line-height: 1.1em;
 	padding: 2px 0 0 0;
 	margin: 1.3em 0 0.5em 0;
@@ -102,46 +102,54 @@ body .intro h1 {
 
 /* nao remover. isso garante que o sumario do gitbook tem apenas 1 pagina. */
 body .page-toc {
-    display: none;
+	display: none;
 }
 
 .toc ul, li {
-    font-family: 'MinionPro', 'Minion Pro';
+	font-family: 'MinionPro', 'Minion Pro';
 }
 .toc ul {
-   list-style-type: none;
+	list-style-type: none;
 }
 .toc h1 {
-    margin-top: 110px!important;
-    margin-bottom: 70px!important;
-    font-size: 3em;
-    font-family: 'MinionPro', 'Minion Pro';
+	margin-top: 110px!important;
+	margin-bottom: 70px!important;
+	font-size: 3em;
+	font-family: 'MinionPro', 'Minion Pro';
 }
 .toc .chapter-toc {
-   padding-left: 0;
+	padding-left: 0;
 }
 .toc .chapter-toc li {
-   margin-bottom: 17px;
-   font-size: 12pt;
+	margin-bottom: 17px;
+	font-size: 12pt;
 }
 .toc .chapter-name-toc {
-   font-weight: bold;
-   color: #0000B3;
+	font-weight: bold;
+	color: #0000B3;
 }
 .toc .chapter-page-toc {
-   font-weight: bold;
-   float: right;
+	font-weight: bold;
+	float: right;
 }
 .toc .section-toc {
-   margin-top: 7px;
+	margin-top: 7px;
 }
 .toc .section-toc li {
-   margin-bottom: 7px;
-   font-size: 11pt;
+	margin-bottom: 7px;
+	font-size: 11pt;
 }
 .toc .section-name-toc {
-   color: #0000B3;
+	color: #0000B3;
 }
 .toc .section-page-toc {
-   float: right;
+	float: right;
+}
+
+body .page .part-header h1 {
+	margin: 6.2cm 0 0 0;
+}
+
+body .page .part-header h1:first-of-type {
+	margin: 1cm 0 0 0;
 }
