@@ -13,24 +13,47 @@
 {% endfor %}
 {% endblock %}
 
-{% macro articles(_articles) %}
-    {% for item in _articles %}
-        <li>
-            {% if (options.numIntroChapters > 0) and (item.path == 'README.md' or item.path.indexOf('intro') == 0)%}
-                <a href="{{ basePath }}/{{ item.path|mdLink }}">{{ item.title }}</a>
-            {% else %}
-                <a href="{{ basePath }}/{{ item.path|mdLink }}">{{ Number(item.level) - options.numIntroChapters + 1 }}. {{ item.title }}</a>
-            {% endif %}
-        </li>
-    {% endfor %}
-{% endmacro %}
-
 {% block content %}
 <div class="page page-toc">
     <h1>Sumário</h1>
-    <ul>
-    {{ articles(summary.chapters) }}
-    </ul>
+    {% if options.parts %}
+        <ul>
+            {% for chapter in summary.chapters %}
+                {% if loop.index <= options.numIntroChapters %}
+                    <li><a href="{{ basePath }}/{{ chapter.path|mdLink }}">{{ chapter.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+            {% for part in options.parts %}
+                <li>{{ part.title }}</li>
+                <ul>
+                    {% for chapter in part.chapters %}
+                        <li>
+                            <a href="{{ basePath }}/{{ chapter.path|mdLink }}">{{ chapter.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <ul>
+            {% for chapter in summary.chapters %}
+                <li>
+                    {% if loop.index <= options.numIntroChapters %}
+                        <a href="{{ basePath }}/{{ chapter.path|mdLink }}">{{ chapter.title }}</a>
+                    {% else %}
+                        <a href="{{ basePath }}/{{ chapter.path|mdLink }}">{{ loop.index - options.numIntroChapters }}. {{ chapter.title }}</a>
+                    {% endif %}
+                </li>
+                <ul>
+                    {% for section in chapters.sections %}
+                        <li>
+                            <a href="{{ basePath }}/{{ section.path|mdLink }}">{{ section.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </div>
 {% endblock %}
 

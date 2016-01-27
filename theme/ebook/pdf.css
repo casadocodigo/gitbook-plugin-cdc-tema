@@ -124,6 +124,18 @@ body .page-toc {
 	margin-bottom: 17px;
 	font-size: 12pt;
 }
+.toc .chapter-toc li.part {
+	margin-top: 2em;
+}
+.toc .part-name-toc {
+	font-weight: bold;
+	color: #0000B3;
+	font-size: 1.1em;
+}
+.toc .part-page-toc {
+	font-weight: bold;
+	float: right;
+}
 .toc .chapter-name-toc {
 	font-weight: bold;
 	color: #0000B3;
