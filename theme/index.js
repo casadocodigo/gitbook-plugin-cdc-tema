@@ -2,37 +2,37 @@ var fs = require("fs");
 var path = require("path");
 
 var style = {
-	"pdf": "pdf.css",
-	"epub": "reader.css",
-	"mobi": "reader.css"
+    "pdf": "pdf.css",
+    "epub": "reader.css",
+    "mobi": "reader.css"
 };
 
 module.exports = {
-	ebook : function () {
-		var extension = obtainExtension(this.options);
-		return {
-			assets: "./theme/ebook",
-			css: [
-				"ebook.css",
-				style[extension],
-				"hljs.css"
-			]
-		};
-	},
-	book : {
-		assets: "./theme/book",
-		css: [
-			"book.css",
-			"hljs.css"
-		]
-	},
-	templates: {
-		"ebook:sumary": "./theme/ebook/templates/gitbook/summary.html",
-		"site:page": "./theme/book/templates/gitbook/page.html",
-		"site:langs": "./theme/book/templates/gitbook/langs.html",
-		"site:glossary": "./theme/book/templates/gitbook/glossary.html"
-	},
-    pdfOptions: pdfOptions
+    ebook : function () {
+        var extension = obtainExtension(this.options);
+        return {
+            assets: "./theme/ebook",
+            css: [
+                "ebook.css",
+                style[extension],
+                "hljs.css"
+            ]
+        };
+    },
+    book : {
+        assets: "./theme/book",
+        css: [
+            "book.css",
+            "hljs.css"
+        ]
+    },
+    templates: {
+        "ebook:sumary": "./theme/ebook/templates/gitbook/summary.html",
+        "site:page": "./theme/book/templates/gitbook/page.html",
+        "site:langs": "./theme/book/templates/gitbook/langs.html",
+        "site:glossary": "./theme/book/templates/gitbook/glossary.html"
+    },
+    setOptions: setOptions
 };
 
 function obtainExtension(options) {
@@ -43,13 +43,18 @@ function obtainExtension(options) {
 	return extension;
 }
 
+function setOptions(){
+    this.options.maxLineLength = 67;
+    pdfOptions.call(this);
+}
+
 function pdfOptions(){
     this.options.pdf.customSize = "155x230";
 
     this.options.pdf.fontSize =  "11";
 
     this.options.pdf.margin.top =  "62";
-    this.options.pdf.margin.bottom =  "62";
+    this.options.pdf.margin.bottom = "62";
     this.options.pdf.margin.left =  "62";
     this.options.pdf.margin.right =  "62";
 
