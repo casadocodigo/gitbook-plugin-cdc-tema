@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="{{ options.cssPath }}/print.css">
+        {% for css in options.css %}
+            <link rel="stylesheet" href="{{ options.cssPath }}/plugins/{{ css.path }}">
+        {% endfor %}
+    </head>
+    <body>
+        {# não mostra rodape quando for capa da parte (tiver parte e for capitulo) #}
+        {% if tocItem && (!options.hasParts || tocItem.type != 'chapter') %}
+            <footer class="rodape">
+                {% if pageNumber % 2 %}
+                    <div class="rodape-conteudo rodape-direita">
+                        <span class="rodape-titulo">{{ tocItem.title }}</span>
+                        <span class="rodape-pagina rodape-margem">{{ pageNumber }}</span>
+                    </div>
+                {% else %}
+                    <div class="rodape-conteudo rodape-esquerda">
+                        <span class="rodape-pagina">{{ pageNumber }}</span>
+                        <span class="rodape-titulo rodape-margem">{{ tocItem.title }}</span>
+                    </div>
+                {% endif %}
+            </footer>
+        {% endif %}
+        {% if next %}
+            <a href="{{ options.headerFooterDir }}/{{next}}.html" />
+        {% endif %}
+    </body>
+</html>

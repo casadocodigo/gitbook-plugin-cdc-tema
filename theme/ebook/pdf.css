@@ -165,3 +165,35 @@ body .page .part-header h1 {
 body .page .part-header h1:first-of-type {
 	margin: 1cm 0 0 0;
 }
+
+.rodape {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 62pt;
+	margin: 0px;
+	border-top: 1px solid black;
+	text-transform: uppercase;
+	font-family: Arial, sans-serif;
+}
+.rodape-conteudo {
+	margin-top: 12pt;
+}
+.rodape-esquerda {
+	text-align: left;
+}
+.rodape-direita {
+	text-align: right;
+}
+.rodape-pagina {
+	font-weight: bold;
+	color: black;
+}
+.rodape-titulo {
+	font-weight: normal;
+	color: dimgray;
+}
+.rodape-margem {
+	margin-left: 12pt;
+}
