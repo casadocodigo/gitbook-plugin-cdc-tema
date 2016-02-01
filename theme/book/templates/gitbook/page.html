@@ -22,14 +22,30 @@
         <div class="toc">
             <h1>Sumário</h1>
             <ul>
-                {% for chapter in summary.chapters %}
-                    <li><span>{{ Number(chapter.level) + 1 }} - {{ chapter.title }}</span></li>
-                    <ul>
-                        {% for section in chapter.sections %}
-                            <li><span>{{ section.title }}</span></li>
-                        {% endfor %}
-                    </ul>
-                {% endfor %}
+                {% if options.parts %}
+                    {% for part in options.parts %}
+                        <li>{{ part.title }}</li>
+                        <ul>
+                            {% for chapter in part.chapters %}
+                                <li><span>{{ chapter.title }}</span></li>
+                                <ul>
+                                    {% for section in chapter.sections %}
+                                        <li><span>{{ section.title }}</span></li>
+                                    {% endfor %}
+                                </ul>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                {% else %}
+                    {% for chapter in summary.chapters %}
+                        <li><span>{{ Number(chapter.level) + 1 }} - {{ chapter.title }}</span></li>
+                        <ul>
+                            {% for section in chapter.sections %}
+                                <li><span>{{ section.title }}</span></li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+                {% endif %}
             </ul>
         </div>
     </div>
