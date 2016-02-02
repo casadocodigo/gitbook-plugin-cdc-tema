@@ -36,11 +36,8 @@ module.exports = {
 };
 
 function obtainExtension(options) {
-	var extension = options.extension || path.extname(options.output).replace(".", "");
-	if (!extension && options.format === "ebook") {
-		extension = "pdf";
-	}
-	return extension;
+    var extension = options.extension || path.extname(options.output).replace(".", "");
+    return extension || "pdf";
 }
 
 function setOptions(){
