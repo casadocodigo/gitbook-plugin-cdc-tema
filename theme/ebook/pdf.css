@@ -41,13 +41,17 @@ body .page li {
 	font-size: 12pt;
 }
 
-body .page pre {
-	font-size: 13px;
-}
-
 body .page code {
 	font-size: 13px;
 	font-family: 'Liberation Mono';
+}
+
+body .page pre {
+	font-size: 11px;
+}
+
+body .page pre code {
+	font-size: 11px;
 }
 
 body .page .figure {
