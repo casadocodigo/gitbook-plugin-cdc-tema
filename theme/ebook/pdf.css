@@ -39,6 +39,7 @@ body .page ul {
 
 body .page li {
 	font-size: 12pt;
+	margin-left: 1em;
 }
 
 body .page code {
