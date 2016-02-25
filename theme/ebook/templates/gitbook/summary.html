@@ -24,7 +24,8 @@
                 {% endif %}
             {% endfor %}
             {% for part in options.parts %}
-                <li>{{ part.title }}</li>
+                <li>
+                <span>{{ part.title }}</span>
                 {% if part.chapters %}
                   <ul>
                       {% for chapter in part.chapters %}
@@ -34,27 +35,30 @@
                       {% endfor %}
                   </ul>
                 {% endif %}
+                </li>
             {% endfor %}
         </ul>
     {% else %}
         <ul>
             {% for chapter in summary.chapters %}
                 <li>
+                   <span>
                     {% if loop.index <= options.numIntroChapters %}
                         <a href="{{ basePath }}/{{ chapter.path|mdLink }}">{{ chapter.title }}</a>
                     {% else %}
                         <a href="{{ basePath }}/{{ chapter.path|mdLink }}">{{ loop.index - options.numIntroChapters }}. {{ chapter.title }}</a>
                     {% endif %}
+                    </span>
+                    {% if chapters.sections %}
+                      <ul>
+                          {% for section in chapters.sections %}
+                              <li>
+                                  <a href="{{ basePath }}/{{ section.path|mdLink }}">{{ section.title }}</a>
+                              </li>
+                          {% endfor %}
+                      </ul>
+                    {% endif %}
                 </li>
-                {% if chapters.sections %}
-                  <ul>
-                      {% for section in chapters.sections %}
-                          <li>
-                              <a href="{{ basePath }}/{{ section.path|mdLink }}">{{ section.title }}</a>
-                          </li>
-                      {% endfor %}
-                  </ul>
-                {% endif %}
             {% endfor %}
         </ul>
     {% endif %}
