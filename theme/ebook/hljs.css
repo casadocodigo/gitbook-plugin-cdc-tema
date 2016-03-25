@@ -37,10 +37,6 @@
 	color: #000000 !important;
 }
 
-.lang-coffeescript .lang-javascript,.lang-javascript .lang-xml,.lang-tex .hljs-formula,.lang-xml .lang-javascript,.lang-xml .lang-vbscript,.lang-xml .lang-css,.lang-xml .hljs-cdata {
-	opacity: .5 !important;
-}
-
 /* CSS */
 .lang-css .hljs-hexcolor {
 	color: #3e999f !important;
