@@ -46,7 +46,7 @@ function setOptions(){
 }
 
 function pdfOptions(){
-    this.options.pdf.customSize = "155x230";
+    this.options.pdf.customSize = "148x210";
 
     this.options.pdf.fontSize =  "11";
 
