@@ -50,10 +50,10 @@ function pdfOptions(){
 
     this.options.pdf.fontSize =  "11";
 
-    this.options.pdf.margin.top =  "62";
-    this.options.pdf.margin.bottom = "62";
-    this.options.pdf.margin.left =  "62";
-    this.options.pdf.margin.right =  "62";
+    this.options.pdf.margin.top =  "55";
+    this.options.pdf.margin.bottom = "55";
+    this.options.pdf.margin.left =  "55";
+    this.options.pdf.margin.right =  "55";
 
     this.options.pdf.introTemplate = path.join(__dirname, "./ebook/templates/pdf/intro.tpl.html");
 
