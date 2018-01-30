@@ -158,9 +158,16 @@ body .page-toc {
 }
 .toc .section-name-toc {
 	color: #0000B3;
+	box-sizing: border-box;
+	display: inline-block;
+	width: 94%;
+	padding-right: 0.9%;
 }
 .toc .section-page-toc {
-	float: right;
+	display: inline-block;
+	width: 5.8%;
+	text-align: right;
+	margin: 0 0.1%;
 }
 
 body .page .part-header h1 {
