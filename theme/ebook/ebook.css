@@ -18,10 +18,6 @@ body .page h3 {
 	padding: 0px;
 }
 
-body .page ul {
-	padding-left: 4em;
-}
-
 body .page li > ul {
 	padding-left: 1em;
 }
