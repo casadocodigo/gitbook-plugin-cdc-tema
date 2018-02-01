@@ -55,6 +55,10 @@ body .page pre code {
 	font-size: 11px;
 }
 
+body .page table code {
+	font-size: 10px;
+}
+
 body .page .figure {
 	text-align: center;
 	margin-bottom: 3em;

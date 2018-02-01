@@ -35,6 +35,14 @@ body .page pre code, body .page code {
 	word-wrap: break-word;
 }
 
+body .page table tr:nth-child(2n) {
+	background-color: white;
+}
+
+body .page table thead tr {
+	background-color: #f8f8f8;
+}
+
 body .page a {
 	color: blue;
 }
