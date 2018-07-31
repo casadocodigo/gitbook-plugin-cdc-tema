@@ -6,16 +6,31 @@ body .page {
 
 body .page h1 {
 	font-size: 1.52em;
+	position: static;
 }
 
 body .page h2 {
 	font-size: 1.2em;
+	position: static;
 }
 
 body .page h3 {
 	font-size: 1em;
 	line-height: 1em;
 	margin: 1em 0 1em 0;
+	position: static;
+}
+
+body .page h4 {
+	position: static;
+}
+
+body .page h5 {
+	position: static;
+}
+
+body .page h6 {
+	position: static;
 }
 
 body .page ul {
