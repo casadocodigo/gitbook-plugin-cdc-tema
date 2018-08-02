@@ -23,7 +23,7 @@ body .page li > ul {
 }
 
 body .page pre {
-	background-color: white;
+	background-color: transparent;
 	overflow: hidden;
 	word-wrap: break-word;
 	margin: 1em 0 1em 0;
@@ -31,12 +31,12 @@ body .page pre {
 }
 
 body .page pre code, body .page code {
-	background-color: white;
+	background-color: transparent;
 	word-wrap: break-word;
 }
 
 body .page table tr:nth-child(2n) {
-	background-color: white;
+	background-color: transparent;
 }
 
 body .page table thead tr {
